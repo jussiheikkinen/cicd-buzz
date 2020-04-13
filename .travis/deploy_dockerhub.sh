@@ -9,8 +9,8 @@ fi
 
 DOCKER_PATH=$DOCKER_USER/$DOCKERHUB_REPO:$TAG
 
-docker build -f Dockerfile -t $DOCKER_PATH .
-docker push $DOCKER_PATH:$TAG
+#docker build -f Dockerfile -t $DOCKER_PATH .
+#docker push $DOCKER_PATH:$TAG
 
-#docker build -f Dockerfile -t $TRAVIS_REPO_SLUG:$TAG .
-#docker push $TRAVIS_REPO_SLUG:$TAG
+docker build -f Dockerfile -t $TRAVIS_REPO_SLUG:$TAG .
+docker push $TRAVIS_REPO_SLUG:$TAG
